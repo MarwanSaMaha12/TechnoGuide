@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Techno Guide</title>
+    <link rel="stylesheet" href="../CSS/login-register.css">
+</head>
+<body>
+    <div class="modal">
+        <form class="modal-content" action="home.html">
+          <div class="container">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <i class="far fa-eye" id="togglePassword"></i>
+      
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="pswRepeat" required>
+            <i class="far fa-eye" id="togglePassword"></i>
+            
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+      
+            <div class="clearfix">
+                <button type="submit" class="register-btn">Register</button>
+                <br>
+                <br>
+                Already have an account? |<a href="../index.html"> Login Now</a>
+            </div>
+          </div>
+        </form>
+      </div>
+  
+
+
+  <script src="https://kit.fontawesome.com/0818416012.js" crossorigin="anonymous"></script>
+  <script>
+  const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#psw');
+
+    togglePassword.addEventListener('click', function (e) {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+});
+  </script>
+</body>
+</html>
